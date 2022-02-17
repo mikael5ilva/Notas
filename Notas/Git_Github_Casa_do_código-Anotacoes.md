@@ -75,3 +75,79 @@
 >#
 >#new file: arquivo.txt
 >```
+---
+
+## Gravando o arquivo no repositório
+Mais conhecido como _"Commitar"_, para gravarmos o arquivo no repositório usamos o comando:
+` $ Git commit -m "citação do comentario"`
+
+Observe que foi invocado o comando git commit, com a opção -m
+para informar a mensagem do commit.
+
+Deve aparecer algo dessa forma:
+
+>[master (root-commit) 8666888] citação do comentario
+>
+>1 file changed, 2 insertions(+)
+>
+>create mode 100111 arquivo.txt
+
+Se executarmos o comando `$ Git status` novamente, teremos a seguindo saída:
+> On branch master
+>
+>nothing to commit, working directory clean
+---
+
+## Alterando o arquivo
+Após digitar uma nova linha no arquivo, adicionar mais arquivos no repositório, fazer alterações dentro do projeto e rodarmos o comando `$ Git status` podemos observar que vai haver mudanças para serem rastreadas: 
+>#On branch master
+>
+>#Changes not staged for commit:
+>
+>#(use "git add <"file">..." to update what will be committed)
+>
+>#(use "git checkout -- <"file">..." to discard changes in working directory)
+>
+>#modified: filmes.txt
+>
+>no changes added to commit (use "git add" and/or
+>"git commit -a")
+
+## Rastreando a gravando as alterações no repositório
+Para rastrear a modificação, devemos usar o comando `$ Git add` novamente:
+
+`$ Git add arquivo.txt`
+
+Com a modificação rastreada, podemos agora gravá-la (commitar) no repositório com o comando `$ Git commit`:
+
+`$ Git commit -m "citação do comentario 2"`
+
+Devemos ter uma resposta semelhante a:
+>
+>[master 7878787] citação do comentario 2
+>
+>1 file changed, 1 insertion(+)
+---
+
+## Verificando alterações realizadas
+Para verificar o histórico das alterações gravadas no repositório, podemos
+executar o comando `$ git log`:
+
+A saída será parecida com:
+
+>commit 7878787000000000000000000000000000000000
+>
+>Author: Fulano da Silva <fulanodasilva.git@gmail.com>
+>
+>Date: Fri Apr 11 21:21:31 2014 -0300
+>
+>     Inserindo nova citacao
+>
+>commit 8666888000000000000000000000000000000000
+>
+>Author: Fulano da Silva <fulanodasilva.git@gmail.com>
+>
+>Date: Fri Apr 11 21:21:31 2014 -0300
+>
+>     Arquivo inicial de citacoes
+---
