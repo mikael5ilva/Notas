@@ -151,3 +151,39 @@ A saída será parecida com:
 >
 >     Arquivo inicial de citacoes
 ---
+
+## Compartilhando seu código atrávez do GitHub
+Acesse o site <https://github.com/> e crie sua conta com nome, email e senha.
+
+## Criando o repositório no GitHub
+1. Clique no botão _New repository_.
+2. No _repository name_ adicione um nome para o projeto remoto.
+3. _Create repository_.
+
+## Apontar o projeto para o GitHub
+No terminal, certifique-se de estar no diretório onde está o repositório local.
+
+Então, execute o comando: `$ git remote add origin https://github.com/fulanodasilva/repositorio.git`
+>Não esquecer de alterar o "fulanodasilva" para o seu usuário GitHub.
+
+## Enviar alterações para o GitHub
+Com o repositório remoto configurado, poderá então enviar as mudanças para o GitHub.
+
+Basta usar o comando `$ Git push origin master`. Com esse comando,enviamos as alterações para o repositório remoto configurado com o nome origin.
+>Forneça seu usuário e senha do GitHub quando solicitado. Deverá aparecer algo semelhante à seguinte saída:
+>
+>Username for ’https://github.com’: fulanodasilva
+>
+>Password for ’https://fulanodasilva@github.com’:Counting objects: 6, done.
+>
+>Delta compression using up to 4 threads.
+>
+>Compressing objects: 100% (4/4), done.
+>
+>Writing objects: 100% (6/6), 609 bytes | 0 bytes/s, done.
+>
+>Total 6 (delta 1), reused 0 (delta 0)
+>
+>To https://github.com/fulanodasilva/citacoes.git
+>
+>*[new branch] master -> master
